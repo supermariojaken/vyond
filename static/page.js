@@ -33,7 +33,7 @@ module.exports = function (req, res, url) {
 
 	var attrs, params, title;
 	switch (url.pathname) {
-                  case "": {
+                  case "/player": {
 			title = "Player";
 			attrs = {
 				data: process.env.SWF_URL + "/player.swf",

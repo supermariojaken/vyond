@@ -110,141 +110,7 @@ if (self !== top) {
     document.getElementById('fb-root').appendChild(e);
   }());
 </script>
-
-<script type="text/javascript">
-  var _kmq = _kmq || [];
-  var _kmk = _kmk || 'd6e9ca5d19bda4afea55a1493af00d0b98c26240';
-  function _kms(u){
-    setTimeout(function(){
-      var d = document, f = d.getElementsByTagName('script')[0],
-      s = d.createElement('script');
-      s.type = 'text/javascript'; s.async = true; s.src = u;
-      f.parentNode.insertBefore(s, f);
-    }, 1);
-  }
-  _kms('http://i.kissmetrics.com/i.js');
-  _kms('http://doug1izaerwt3.cloudfront.net/' + _kmk + '.1.js');
-</script>
-
-<script type="text/javascript">
-		jQuery.extend(CCStandaloneBannerAdUI, {"actionshopSWF":"http:\/\/josephcrosmanplays532.github.io\/animation\/877\/actionshop.swf","apiserver":"http:\/\/ga.vyond.com\/","clientThemePath":"http:\/\/josephcrosmanplays532.github.io\/static\/477\/<client_theme>","userId":""});
-</script>
-
-<div class="page-container">
-
-<!-- HEADER -->
-<div class="site-header">
-	<div class="site-header-bg"></div>
-	<div class="container site-header-inside">
-		<a class="site-logo" href="/" title="GoAnimate">
-			<img alt="Make a Video Online with GoAnimate.com" src="https://josephcrosmanplays532.github.io/static/477/go/img/business_video/home/logo.png"/>
-		</a>
-
-		<div class="pull-right">
-			<ul id="top-nav" class="top-nav">
-				<li class="dropdown">
-					<a class="dropdown-toggle" href="http://web.archive.org/web/20140421234546/http://goanimate.com/videos" data-toggle="dropdown">Your Account <span class="caret"></span></a>
-					<ul class="dropdown-menu">
-					<li><a href="https://web.archive.org/web/20181004174617/http://vyondhoster.000webhostapp.com/student">Dashboard</a></li>
-                                        <li><a href="https://web.archive.org/web/20181004174617/http://vyondhoster.000webhostapp.com/movies">Your Videos</a></li>
-                                        <li class="divider"></li>
-                                        <li><a href="https://web.archive.org/web/20181004174617/http://vyondhoster.000webhostapp.com/account">Account Settings</a></li>
-                                        <li><a href="https://web.archive.org/web/20181004174617/http://vyondhoster.000webhostapp.com/profile/00lbzOKBnEro">Your Profile</a></li>
-                                        <li class="divider"></li>
-                                        <li><a class="logout-link" href="https://web.archive.org/web/20181004174617/http://vyondhoster.000webhostapp.com/logoff">Logout</a></li>
-                                    </ul>
-                                </li>
-				<li class="divider"></li>
-				<li class="dropdown">
-					<a class="dropdown-toggle" href="http://web.archive.org/web/20140421234546/http://goanimate.com/videos" data-toggle="dropdown">Explore <span class="caret"></span></a>
-					<ul class="dropdown-menu">
-						<li><a href="http://web.archive.org/web/20140421234546/http://goanimate.com/video-maker-tips">Blog</a></li>
-						<li><a href="http://web.archive.org/web/20140421234546/http://goanimate.com/videos">Videos</a></li>
-					</ul>
-				</li>
-				<li class="divider"></li>
-
-				<li>
-					<a href="https://josephcrosmanplays532.github.io/go/character_creator">Create &amp; Browse Characters</a>
-				</li>
-			</ul>
-
-			<div class="top-nav-vm-btn">
-				<a class="btn btn-orange pull-left" href="https://josephcrosmanplays532.github.io/go_full">Make a Video</a>
-			</div>
-		</div>
-
-	</div>
-</div>
-		<div class="warning">Wellcome To GoAnimate in github pages! feel free to make any video you desire.
-		contact joseph the animator, the lead developer for any assistance. however, don't put this on evennode or the same platform this app is running on or you get DCMA complaint by vyond.<br><a href="https://codepasta.app/pastes?search=GoAnimate">Search GoAnimate on codepasta</a>
-		</div>
-	</header>
-	<table>
-		<thead>
-			<tr>
-				<td></td>
-				<td>Video Title</td>
-				<td>Last Modified</td>
-				<td></td>
-			</tr>
-		</thead>
-		<tbody></tbody>
-		<tfoot>
-			<tr>
-				<td colspan="127"><a id="load_more" href="javascript:;">LOAD MORE...</a></td>
-			</tr>
-		</tfoot>
-	</table>
-	<footer>
-        <nav id="foot-left">
-		<a href="https://discord.gg/goanimate">Wrapper Central Discord</a>
-	</nav>
-
-	<nav id="foot-right">
-		<a href="https://josephcrosmanplays532.github.io/goanimate-beta-server">Server Page</a>
-		<a href="https://josephcrosmanplays532.github.io/goanimate-beta-server/animation">Animation Server Page</a>
-	</nav>
-	</footer>
-	<form enctype='multipart/form-data' action='/upload_movie' method='post'>
-		<input id='file' type="file" onchange="this.form.submit()" name='import' accept=".xml" />
-	</form>
-	<script>
-		var json;
-		var tbody = document.getElementsByTagName('tbody')[0];
-		var loadMore = document.getElementById('load_more');
-		const listReq = new XMLHttpRequest();
-		listReq.open('GET', '/movieList');
-		listReq.send();
-
-		var C = 0;
-		function loadRows() {
-			let c = C; C += 69;
-			for (; c < C; c++) {
-				if (c > json.length - 1) {
-					loadMore.remove();
-					break;
-				}
-
-				const tbl = json[c];
-				const date = tbl.date.substr(0, 10) + ' ' + tbl.date.substr(11);
-				tbody.insertAdjacentHTML('beforeend',
-					'<tr><td><img src="/movie_thumbs/' + tbl.id + '.png"></td><td><div>' + tbl.title.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;") + '</div><div>' + tbl.durationString + '</div></div></td><td><span>' + date + '</span></td><td><a href="javascript:;" onclick="popup(\'' + tbl.id + '\')"></a><a href="/go_full?movieId=' + tbl.id + '"></a><a href="/movies/' + tbl.id + '.xml" download="' + tbl.title + '"></a></td></tr>');
-			}
-		}
-
-		loadMore.onclick = loadRows;
-		listReq.onreadystatechange = function (e) {
-			if (listReq.readyState != 4) return;
-			json = JSON.parse(listReq.responseText);
-			loadRows();
-		}
-
-		function popup(id) {
-			window.open('/player?movieId=' + id, 'MsgWindow', 'width=1280,height=723,left=' + (screen.width / 2 - 640) + ',top=' + (screen.height / 2 - 360));
-		}
-	</script>
-	<style>
+<style>
 		html {
 			font-family: 'Sailec', Arial, sans-serif;
 			-ms-text-size-adjust: 100%;
@@ -598,5 +464,138 @@ if (self !== top) {
 			font-style: normal;
 		}
 	</style>
+<script type="text/javascript">
+  var _kmq = _kmq || [];
+  var _kmk = _kmk || 'd6e9ca5d19bda4afea55a1493af00d0b98c26240';
+  function _kms(u){
+    setTimeout(function(){
+      var d = document, f = d.getElementsByTagName('script')[0],
+      s = d.createElement('script');
+      s.type = 'text/javascript'; s.async = true; s.src = u;
+      f.parentNode.insertBefore(s, f);
+    }, 1);
+  }
+  _kms('http://i.kissmetrics.com/i.js');
+  _kms('http://doug1izaerwt3.cloudfront.net/' + _kmk + '.1.js');
+</script>
+
+<script type="text/javascript">
+		jQuery.extend(CCStandaloneBannerAdUI, {"actionshopSWF":"http:\/\/josephcrosmanplays532.github.io\/animation\/877\/actionshop.swf","apiserver":"http:\/\/ga.vyond.com\/","clientThemePath":"http:\/\/josephcrosmanplays532.github.io\/static\/477\/<client_theme>","userId":""});
+</script>
+
+<div class="page-container">
+
+<!-- HEADER -->
+<div class="site-header">
+	<div class="site-header-bg"></div>
+	<div class="container site-header-inside">
+		<a class="site-logo" href="/" title="GoAnimate">
+			<img alt="Make a Video Online with GoAnimate.com" src="https://josephcrosmanplays532.github.io/static/477/go/img/business_video/home/logo.png"/>
+		</a>
+
+		<div class="pull-right">
+			<ul id="top-nav" class="top-nav">
+				<li class="dropdown">
+					<a class="dropdown-toggle" href="http://web.archive.org/web/20140421234546/http://goanimate.com/videos" data-toggle="dropdown">Your Account <span class="caret"></span></a>
+					<ul class="dropdown-menu">
+					<li><a href="https://web.archive.org/web/20181004174617/http://vyondhoster.000webhostapp.com/student">Dashboard</a></li>
+                                        <li><a href="https://web.archive.org/web/20181004174617/http://vyondhoster.000webhostapp.com/movies">Your Videos</a></li>
+                                        <li class="divider"></li>
+                                        <li><a href="https://web.archive.org/web/20181004174617/http://vyondhoster.000webhostapp.com/account">Account Settings</a></li>
+                                        <li><a href="https://web.archive.org/web/20181004174617/http://vyondhoster.000webhostapp.com/profile/00lbzOKBnEro">Your Profile</a></li>
+                                        <li class="divider"></li>
+                                        <li><a class="logout-link" href="https://web.archive.org/web/20181004174617/http://vyondhoster.000webhostapp.com/logoff">Logout</a></li>
+                                    </ul>
+                                </li>
+				<li class="divider"></li>
+				<li class="dropdown">
+					<a class="dropdown-toggle" href="http://web.archive.org/web/20140421234546/http://goanimate.com/videos" data-toggle="dropdown">Explore <span class="caret"></span></a>
+					<ul class="dropdown-menu">
+						<li><a href="http://web.archive.org/web/20140421234546/http://goanimate.com/video-maker-tips">Blog</a></li>
+						<li><a href="http://web.archive.org/web/20140421234546/http://goanimate.com/videos">Videos</a></li>
+					</ul>
+				</li>
+				<li class="divider"></li>
+
+				<li>
+					<a href="https://josephcrosmanplays532.github.io/go/character_creator">Create &amp; Browse Characters</a>
+				</li>
+			</ul>
+
+			<div class="top-nav-vm-btn">
+				<a class="btn btn-orange pull-left" href="https://josephcrosmanplays532.github.io/go_full">Make a Video</a>
+			</div>
+		</div>
+
+	</div>
+</div>
+		<div class="warning">Wellcome To GoAnimate in github pages! feel free to make any video you desire.
+		contact joseph the animator, the lead developer for any assistance. however, don't put this on evennode or the same platform this app is running on or you get DCMA complaint by vyond.<br><a href="https://codepasta.app/pastes?search=GoAnimate">Search GoAnimate on codepasta</a>
+		</div>
+	</header>
+	<table>
+		<thead>
+			<tr>
+				<td></td>
+				<td>Video Title</td>
+				<td>Last Modified</td>
+				<td></td>
+			</tr>
+		</thead>
+		<tbody></tbody>
+		<tfoot>
+			<tr>
+				<td colspan="127"><a id="load_more" href="javascript:;">LOAD MORE...</a></td>
+			</tr>
+		</tfoot>
+	</table>
+	<footer>
+        <nav id="foot-left">
+		<a href="https://discord.gg/goanimate">Wrapper Central Discord</a>
+	</nav>
+
+	<nav id="foot-right">
+		<a href="https://josephcrosmanplays532.github.io/goanimate-beta-server">Server Page</a>
+		<a href="https://josephcrosmanplays532.github.io/goanimate-beta-server/animation">Animation Server Page</a>
+	</nav>
+	</footer>
+	<form enctype='multipart/form-data' action='/upload_movie' method='post'>
+		<input id='file' type="file" onchange="this.form.submit()" name='import' accept=".xml" />
+	</form>
+	<script>
+		var json;
+		var tbody = document.getElementsByTagName('tbody')[0];
+		var loadMore = document.getElementById('load_more');
+		const listReq = new XMLHttpRequest();
+		listReq.open('GET', '/movieList');
+		listReq.send();
+
+		var C = 0;
+		function loadRows() {
+			let c = C; C += 69;
+			for (; c < C; c++) {
+				if (c > json.length - 1) {
+					loadMore.remove();
+					break;
+				}
+
+				const tbl = json[c];
+				const date = tbl.date.substr(0, 10) + ' ' + tbl.date.substr(11);
+				tbody.insertAdjacentHTML('beforeend',
+					'<tr><td><img src="/movie_thumbs/' + tbl.id + '.png"></td><td><div>' + tbl.title.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;") + '</div><div>' + tbl.durationString + '</div></div></td><td><span>' + date + '</span></td><td><a href="javascript:;" onclick="popup(\'' + tbl.id + '\')"></a><a href="/go_full?movieId=' + tbl.id + '"></a><a href="/movies/' + tbl.id + '.xml" download="' + tbl.title + '"></a></td></tr>');
+			}
+		}
+
+		loadMore.onclick = loadRows;
+		listReq.onreadystatechange = function (e) {
+			if (listReq.readyState != 4) return;
+			json = JSON.parse(listReq.responseText);
+			loadRows();
+		}
+
+		function popup(id) {
+			window.open('/player?movieId=' + id, 'MsgWindow', 'width=1280,height=723,left=' + (screen.width / 2 - 640) + ',top=' + (screen.height / 2 - 360));
+		}
+	</script>
 </body>
 </html>

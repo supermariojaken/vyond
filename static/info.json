@@ -2,21 +2,21 @@
 	"GET": {
 		"/index.html": {
 			"headers": {
-				"Location": "pages/html/list.html"
+				"Location": "/html/list.html"
 			},
 			"statusCode": 302,
 			"content": ""
 		},
 		"/$": {
 			"headers": {
-				"Location": "pages/html/list.html"
+				"Location": "/html/list.html"
 			},
 			"statusCode": 302,
 			"content": ""
 		},
 		"/go/character_creator/family": {
 			"headers": {
-				"Location": "/cc?themeId=family&bs=adam"
+				"Location": "https://josephcrosmanplays532.github.io/go/character_creator/family"
 			},
 			"statusCode": 302,
 			"content": ""

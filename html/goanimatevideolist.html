@@ -187,8 +187,8 @@ if (self !== top) {
 
 <div class="warning">
     Wellcome to GoAnimate in github pages! feel free to make any video you desire. contact joseph the animator (the lead developer) for any assistance. however, please don't put this iframe in evennode or somthing simular or you will get an DCMA complaint from vyond.</div>
-<main>
-        <table>
+	</header>
+	<table>
 		<thead>
 			<tr>
 				<td></td>
@@ -204,15 +204,10 @@ if (self !== top) {
 			</tr>
 		</tfoot>
 	</table>
-	<form enctype="multipart/form-data" action="/upload_movie" method="post">
-		<input id="file" type="file" onchange="this.form.submit()" name="import" accept=".xml">
+	<form enctype='multipart/form-data' action='/upload_movie' method='post'>
+		<input id='file' type="file" onchange="this.form.submit()" name='import' accept=".xml" />
 	</form>
-	</body>
-
-<form enctype='multipart/form-data' action='/upload_character' method='post'>
-	<input id='character_file' type="file" onchange="this.form.submit()" name='import' accept=".xml" />
-</form>
-          <script>
+	<script>
 		var json;
 		var tbody = document.getElementsByTagName('tbody')[0];
 		var loadMore = document.getElementById('load_more');
@@ -232,7 +227,7 @@ if (self !== top) {
 				const tbl = json[c];
 				const date = tbl.date.substr(0, 10) + ' ' + tbl.date.substr(11);
 				tbody.insertAdjacentHTML('beforeend',
-					'<tr><td><img src="/movie_thumbs/' + tbl.id + '.png"></td><td><div>' + tbl.title.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;") + '</div><div>' + tbl.durationString + '</div></div></td><td><span>' + date + '</span></td><td><a href="javascript:;" onclick="popup(\'' + tbl.id + '\')"></a><a href="/go_full?movieId=' + tbl.id + '"></a><a href="/movies/' + tbl.id + '.xml" download="' + tbl.title + '"></a></td></tr>');
+					'<tr><td><img src="/movie_thumbs/' + tbl.id + '.png"></td><td><div>' + tbl.title.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;") + '</div><div>' + tbl.durationString + '</div></div></td><td><span>' + date + '</span></td><td><a href="javascript:;" onclick="popup(\'' + tbl.id + '\')"></a><a href="/videomaker/full?movieId=' + tbl.id + '"></a><a href="/movies/' + tbl.id + '.xml" download="' + tbl.title + '"></a></td></tr>');
 			}
 		}
 
@@ -242,6 +237,7 @@ if (self !== top) {
 			json = JSON.parse(listReq.responseText);
 			loadRows();
 		}
+
 
 		function popup(id) {
 			window.open('/player?movieId=' + id, 'MsgWindow', 'width=640,height=360,left=' + (screen.width / 2 - 640) + ',top=' + (screen.height / 2 - 360));
